@@ -9,7 +9,7 @@ package javathread;
  *
  * @author gguag
  */
-public class Processo {
+public class Processo extends Thread{
     private String nome;
     
     public Processo(String nome){
@@ -18,7 +18,10 @@ public class Processo {
     }
     
     public void run(){
-        for(;;) System.out.println(nome);
+        int i = 0;
+        for(;;i++){
+            System.out.println(nome+" "+i);
+        }
         
     }
     
