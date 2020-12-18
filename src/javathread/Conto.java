@@ -21,10 +21,14 @@ public class Conto {
     
     synchronized void versa(int somma){
         totale = totale + somma - tasse;
-        System.out.println("conto: "+totale);
+  
     }
     
-    synchronized int saldo(){
+    synchronized void preleva(int somma){
+        totale = totale - somma;
+    }
+    
+    synchronized int getSaldo(){
         return totale;
         
     }
